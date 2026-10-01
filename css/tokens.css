@@ -1,0 +1,144 @@
+/**
+ * CMGalaxy Design System Tokens
+ * Defined in CMGalaxy Design Spec
+ * Clean SaaS growth-marketing system with airy spacing, strong navy typography, bright green CTAs, and light bordered surfaces.
+ */
+
+:root {
+  /* CMGalaxy Core Colors */
+  --color-primary: #161C52;
+  --color-primary-contrast: #FFFFFF;
+  --color-secondary: #34C759;
+  --color-tertiary: #3C7BFF;
+  --color-neutral: #E5E7EB;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F8FAFF;
+  --color-on-surface: #333333;
+  --color-muted: #667085;
+  --color-accent: #34C759;
+  --color-border: #E5E7EB;
+  --color-error: #EF4444;
+  --color-footer-bg: #041543;
+
+  /* Aliases for backwards compatibility / component semantic tokens */
+  --cmg-brand: var(--color-primary);
+  --cmg-cta: var(--color-secondary);
+  --cmg-cta-hover: #2ebd4f;
+  --cmg-accent: var(--color-tertiary);
+  --cmg-border: var(--color-border);
+  
+  --bg-app: var(--color-surface);
+  --bg-surface: var(--color-surface);
+  --bg-subtle: var(--color-surface-alt);
+  --bg-card: var(--color-surface);
+  --bg-hover: var(--color-surface-alt);
+
+  --text-primary: var(--color-primary);
+  --text-secondary: var(--color-on-surface);
+  --text-muted: var(--color-muted);
+  --text-inverse: var(--color-primary-contrast);
+
+  --border-light: var(--color-border);
+  --border-subtle: #D1D5DB;
+  --border-strong: #9CA3AF;
+  --border-focus: var(--color-tertiary);
+
+  /* Diagnostic Status Palette (Clean flat borders and subtle tints) */
+  --color-reliable: #16A34A;
+  --color-reliable-bg: #F0FDF4;
+  --color-reliable-border: #BBF7D0;
+
+  --color-investigate: #D97706;
+  --color-investigate-bg: #FFFBEB;
+  --color-investigate-border: #FDE68A;
+
+  --color-gap: #DC2626;
+  --color-gap-bg: #FEF2F2;
+  --color-gap-border: #FECACA;
+
+  --color-unknown: #475569;
+  --color-unknown-bg: #F8FAFC;
+  --color-unknown-border: #E2E8F0;
+
+  /* Budget Impact Badges */
+  --impact-critical-text: #991B1B;
+  --impact-critical-bg: #FEF2F2;
+  --impact-critical-border: #FCA5A5;
+
+  --impact-high-text: #9A3412;
+  --impact-high-bg: #FFF7ED;
+  --impact-high-border: #FDBA74;
+
+  --impact-medium-text: #854D0E;
+  --impact-medium-bg: #FEFCE8;
+  --impact-medium-border: #FDE047;
+
+  --impact-low-text: #334155;
+  --impact-low-bg: #F1F5F9;
+  --impact-low-border: #CBD5E1;
+
+  /* Typography System: Onest */
+  --font-family: 'Onest', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Specific Typography Tokens */
+  --type-headline-display: 700 54px/65px var(--font-family);
+  --type-headline-lg: 600 41px/65px var(--font-family);
+  --type-headline-md: 600 31px/37px var(--font-family);
+  --type-headline-sm: 600 24px/30.8px var(--font-family);
+  --type-body-lg: 400 18px/30.6px var(--font-family);
+  --type-body-md: 400 16px/28px var(--font-family);
+  --type-body-sm: 400 14px/22px var(--font-family);
+  --type-label-lg: 500 16px/24px var(--font-family);
+  --type-label-md: 500 14px/20px var(--font-family);
+  --type-label-sm: 500 12px/16px var(--font-family);
+  --type-overline: 600 12px/16px var(--font-family);
+
+  /* Rounded Radii Tokens */
+  --rounded-none: 0px;
+  --rounded-sm: 4px;
+  --rounded-md: 8px;     /* Cards, inputs, content containers */
+  --rounded-lg: 16px;    /* Softer grouped sections */
+  --rounded-xl: 24px;
+  --rounded-full: 9999px; /* CTAs, chips, pills */
+
+  /* Legacy Radii aliases */
+  --radius-sm: var(--rounded-sm);
+  --radius-md: var(--rounded-md);
+  --radius-lg: var(--rounded-lg);
+  --radius-xl: var(--rounded-xl);
+  --radius-full: var(--rounded-full);
+
+  /* Spacing Scale Tokens */
+  --spacing-xs: 8px;
+  --spacing-sm: 20px;
+  --spacing-md: 34px;
+  --spacing-lg: 50px;
+  --spacing-xl: 100px;
+  --spacing-gutter: 24px;
+  --spacing-section: 80px;
+
+  /* Legacy Spacing aliases */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 34px;
+  --space-10: 48px;
+  --space-12: 64px;
+  --space-16: 80px;
+  --space-20: 100px;
+
+  /* Elevation: Intentionally Flat and Light */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  --shadow-sm: 0 1px 3px 0 rgba(22, 28, 82, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(22, 28, 82, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(22, 28, 82, 0.06);
+  --shadow-xl: 0 12px 24px -4px rgba(22, 28, 82, 0.08);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

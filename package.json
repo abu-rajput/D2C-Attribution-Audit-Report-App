@@ -1,0 +1,19 @@
+{
+  "name": "cmgalaxy-d2c-attribution-audit",
+  "version": "1.0.0",
+  "description": "CMGalaxy 12-Point D2C Attribution Audit interactive diagnostic experience",
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "test:rules": "node -e \"import('./js/rulesEngine.js').then(r => console.log('Rules engine loaded successfully'))\""
+  },
+  "keywords": [
+    "cmgalaxy",
+    "attribution-audit",
+    "d2c",
+    "marketing-intelligence",
+    "lead-generation"
+  ],
+  "author": "CMGalaxy Product Engineering",
+  "license": "UNLICENSED"
+}

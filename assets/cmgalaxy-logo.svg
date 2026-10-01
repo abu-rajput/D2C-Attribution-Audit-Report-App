@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 30" width="168" height="28" fill="none">
+  <defs>
+    <linearGradient id="orbitGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34C759" />
+      <stop offset="35%" stop-color="#30B853" />
+      <stop offset="65%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#3C7BFF" />
+    </linearGradient>
+  </defs>
+
+  <!-- Wordmark: CMGALA -->
+  <text x="0" y="23" fill="#111827" font-family="'Onest', -apple-system, BlinkMacSystemFont, sans-serif" font-size="21" font-weight="900" letter-spacing="-0.3">CMGALA</text>
+
+  <!-- Orbit around X: ellipse tilted at ~-35 degrees -->
+  <ellipse cx="120" cy="15" rx="19" ry="7.5" transform="rotate(-35 120 15)" stroke="url(#orbitGrad)" stroke-width="2.4" fill="none" stroke-linecap="round" />
+
+  <!-- Letters X and Y -->
+  <text x="110.5" y="23" fill="#111827" font-family="'Onest', -apple-system, BlinkMacSystemFont, sans-serif" font-size="21" font-weight="900" letter-spacing="-0.3">X</text>
+  <text x="129" y="23" fill="#111827" font-family="'Onest', -apple-system, BlinkMacSystemFont, sans-serif" font-size="21" font-weight="900" letter-spacing="-0.3">Y</text>
+</svg>

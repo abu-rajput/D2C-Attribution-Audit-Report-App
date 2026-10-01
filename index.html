@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D2C Attribution Audit | Meta, Google & Shopify | CMGalaxy</title>
+  <meta name="description" content="Find where Meta, Google and Shopify reporting disagree and identify attribution gaps that could affect your marketing budget decisions with the CMGalaxy D2C Attribution Audit.">
+  <meta name="keywords" content="D2C attribution audit, Meta Google Shopify attribution, D2C marketing attribution, Shopify attribution, Meta attribution, Google Ads attribution, marketing attribution audit, cross-channel attribution">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="D2C Attribution Audit | Meta, Google & Shopify | CMGalaxy">
+  <meta property="og:description" content="Find where Meta, Google and Shopify reporting disagree and identify attribution gaps that could affect your marketing budget decisions.">
+  <meta property="og:image" content="assets/og-attribution-audit.svg">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/audit.css">
+  <link rel="stylesheet" href="css/report.css">
+  
+  <!-- Google Fonts: Onest Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER (Matching CMGalaxy Official Navigation)
+       ========================================== -->
+  <header class="app-header" role="banner">
+    <div class="header-container">
+      <div class="header-left-group">
+        <!-- Official CMGALAXY Logo -->
+        <a href="https://www.cmgalaxy.com/" target="_blank" rel="noopener noreferrer" class="header-logo-brand" id="header-brand-link" aria-label="CMGalaxy Home">
+          <img src="assets/cmgalaxy-logo.png" alt="CMGalaxy Logo" class="brand-logo-img">
+        </a>
+
+        <!-- Main Navigation Links from Screenshot -->
+        <nav class="header-nav" role="navigation" aria-label="Primary Navigation">
+          <a href="https://www.cmgalaxy.com/" target="_blank" rel="noopener noreferrer" class="nav-item" id="nav-item-home">Home</a>
+
+          <!-- Features with Dropdown (Matching Screenshot) -->
+          <div class="nav-item-dropdown-wrap" id="nav-features-wrap">
+            <button type="button" class="nav-item nav-item-dropdown-btn" id="nav-item-features" aria-expanded="false" aria-haspopup="true">
+              Features
+            </button>
+
+            <div class="nav-dropdown-menu" id="nav-features-dropdown" role="menu" aria-label="Features dropdown">
+              <!-- Item 1: Omnichannel Marketing Dashboard -->
+              <a href="https://www.cmgalaxy.com/features/omnichannel-marketing-dashboard" target="_blank" rel="noopener noreferrer" class="dropdown-menu-item" role="menuitem">
+                <div class="dropdown-item-header">
+                  <span class="dropdown-item-title highlight">Omnichannel Marketing Dashboard</span>
+                  <svg class="dropdown-item-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </div>
+                <span class="dropdown-item-sub">One Platform. Every Channel. Total Control</span>
+              </a>
+
+              <!-- Item 2: AI Agent -->
+              <a href="https://www.cmgalaxy.com/features/ai-assistant" target="_blank" rel="noopener noreferrer" class="dropdown-menu-item" role="menuitem">
+                <div class="dropdown-item-header">
+                  <span class="dropdown-item-title">AI Agent</span>
+                </div>
+                <span class="dropdown-item-sub">Marketing Intelligence, On Autopilot</span>
+              </a>
+
+              <!-- Item 3: Full Funnel Attribution -->
+              <a href="https://www.cmgalaxy.com/features/full-funnel-attribution" target="_blank" rel="noopener noreferrer" class="dropdown-menu-item" role="menuitem">
+                <div class="dropdown-item-header">
+                  <span class="dropdown-item-title">Full Funnel Attribution</span>
+                </div>
+                <span class="dropdown-item-sub">Advanced Attribution, Simplified</span>
+              </a>
+
+              <!-- Item 4: Integration and Connectors -->
+              <a href="https://www.cmgalaxy.com/features/integration-and-connectors" target="_blank" rel="noopener noreferrer" class="dropdown-menu-item" role="menuitem">
+                <div class="dropdown-item-header">
+                  <span class="dropdown-item-title">Integration and Connectors</span>
+                </div>
+                <span class="dropdown-item-sub">All Your Tools. Finally Talking.</span>
+              </a>
+            </div>
+          </div>
+
+          <a href="https://www.cmgalaxy.com/lex" target="_blank" rel="noopener noreferrer" class="nav-item nav-item-lex" id="nav-item-lex">
+            <svg class="lex-sparkle-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/>
+              <path d="M18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z"/>
+            </svg>
+            <span>Lex</span>
+          </a>
+          <a href="https://www.cmgalaxy.com/about-us" target="_blank" rel="noopener noreferrer" class="nav-item" id="nav-item-about">About Us</a>
+
+          <!-- Resources with Dropdown (Matching Screenshot) -->
+          <div class="nav-item-dropdown-wrap" id="nav-resources-wrap">
+            <button type="button" class="nav-item nav-item-dropdown-btn" id="nav-item-resources" aria-expanded="false" aria-haspopup="true">
+              Resources
+            </button>
+
+            <div class="nav-dropdown-menu nav-dropdown-menu-simple" id="nav-resources-dropdown" role="menu" aria-label="Resources dropdown">
+              <a href="https://cmgalaxy.com/blog" target="_blank" rel="noopener noreferrer" class="dropdown-simple-item" role="menuitem">
+                CMG Blog
+              </a>
+              <a href="https://cmgalaxy.com/glossary" target="_blank" rel="noopener noreferrer" class="dropdown-simple-item" role="menuitem">
+                Glossary
+              </a>
+              <a href="https://cmgalaxy.com/website-audit" target="_blank" rel="noopener noreferrer" class="dropdown-simple-item" role="menuitem">
+                Website Audit
+              </a>
+              <a href="https://geo.cmgalaxy.com/" target="_blank" rel="noopener noreferrer" class="dropdown-simple-item" role="menuitem">
+                GEO Audit
+              </a>
+              <a href="https://cmgalaxy.com/compare-cmgalaxy" target="_blank" rel="noopener noreferrer" class="dropdown-simple-item" role="menuitem">
+                Compare CMGalaxy
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Right Action Items from Screenshot -->
+      <div class="header-actions">
+        <a href="https://platform.cmgalaxy.com/login" target="_blank" rel="noopener noreferrer" class="nav-signin-link" id="nav-signin-btn">
+          <svg class="user-avatar-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="10" r="3.2"/>
+            <path d="M6.8 19.4a7 7 0 0 1 10.4 0"/>
+          </svg>
+          <span>Sign in</span>
+        </a>
+
+        <a href="https://platform.cmgalaxy.com/sign-up" target="_blank" rel="noopener noreferrer" class="btn-signup-pill" id="nav-signup-btn">
+          Sign up for free
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       MAIN CONTENT CONTAINER
+       ========================================== -->
+  <main id="main-content" role="main">
+
+    <!-- ==========================================
+         STATE 1: LANDING PAGE
+         ========================================== -->
+    <section id="view-landing" class="app-view active" aria-labelledby="hero-title">
+      <div class="landing-hero container">
+        <div class="eyebrow-pill">
+          <span class="eyebrow-dot"></span>
+          <span>Free D2C Attribution Audit</span>
+        </div>
+
+        <h1 id="hero-title" class="hero-headline">
+          Do Meta, Google & Shopify actually agree on your revenue?
+        </h1>
+
+        <p class="hero-subhead">
+          Answer 12 questions to identify where your marketing reporting is reliable, where numbers disagree, and which attribution gaps could affect your budget decisions.
+        </p>
+
+        <div class="hero-meta-row">
+          <span>12 questions</span>
+          <span class="meta-divider">·</span>
+          <span>~10 minutes</span>
+          <span class="meta-divider">·</span>
+          <span>Instant personalised report</span>
+        </div>
+
+        <div id="resume-banner-wrap" class="resume-banner-wrap" style="display: none;">
+          <div class="resume-session-card">
+            <span class="resume-badge">⏱ Previous Audit Detected:</span>
+            <span id="resume-session-text" class="resume-session-text"></span>
+            <button type="button" class="btn-textual-cta" id="btn-resume-audit">Resume Now →</button>
+          </div>
+        </div>
+
+        <div class="hero-cta-group">
+          <button type="button" class="btn btn-primary hero-cta-btn" id="btn-start-audit-hero">
+            Start My Attribution Audit →
+          </button>
+          <span class="hero-microcopy">
+            No integrations required. Just answer based on your current reporting setup.
+          </span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         STATE 2: INTERACTIVE AUDIT INTERFACE
+         ========================================== -->
+    <section id="view-audit" class="app-view" aria-labelledby="question-text">
+      <div class="audit-view-container container">
+        <div class="audit-shell" role="region" aria-label="Interactive Diagnostic Questions">
+          
+          <!-- Top Status & Progress Bar -->
+          <div class="audit-top-bar">
+            <div class="audit-status-row">
+              <span class="audit-category-label" id="audit-category-name">01 — Revenue & Conversion</span>
+              <span class="audit-counter-badge" id="audit-counter-text">Question 01 of 12</span>
+            </div>
+
+            <div class="progress-track" role="progressbar" aria-valuemin="1" aria-valuemax="12" aria-valuenow="1" id="audit-progressbar" aria-label="Audit Progress">
+              <div class="progress-fill" id="audit-progress-fill" style="width: 8.33%;"></div>
+            </div>
+          </div>
+
+          <!-- Question Body -->
+          <div class="audit-content-area">
+            <div class="question-title-tag" id="question-title-tag">Revenue match</div>
+            <h2 class="question-heading" id="question-text">
+              Does total revenue claimed by Meta + Google make sense against actual Shopify revenue after allowing for attribution overlap?
+            </h2>
+
+            <!-- Four Selectable Cards (Section 10 & 11) -->
+            <div class="answers-grid" role="radiogroup" aria-label="Answer Choices" id="answers-container">
+              <!-- Dynamically populated by JS -->
+            </div>
+
+            <!-- Accessibility / Keyboard Hint -->
+            <div class="keyboard-hint-row">
+              <span>Use keys <kbd class="kbd-shortcut">1</kbd>–<kbd class="kbd-shortcut">4</kbd> to select</span>
+              <span>Press <kbd class="kbd-shortcut">Enter</kbd> to proceed</span>
+            </div>
+          </div>
+
+          <!-- Navigation Footer -->
+          <div class="audit-nav-footer">
+            <button type="button" class="btn-textual-back" id="btn-audit-back">
+              ← Back
+            </button>
+            <button type="button" class="btn btn-primary" id="btn-audit-next" disabled>
+              Next Question →
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         STATE 3: COMPLETION & LEAD CAPTURE FORM
+         ========================================== -->
+    <section id="view-lead" class="app-view" aria-labelledby="lead-title">
+      <div class="audit-view-container container">
+        <div class="audit-shell">
+          <div class="lead-capture-container">
+            
+            <div class="lead-top-nav" style="justify-content: flex-start;">
+              <button type="button" class="btn-textual-back" id="btn-lead-back" aria-label="Back to questions">
+                ← Back
+              </button>
+            </div>
+
+            <div class="completion-badge-wrap">
+              <span class="completion-pill">
+                ✓ 12 of 12 questions answered
+              </span>
+            </div>
+
+            <h2 id="lead-title" class="lead-headline">
+              Your personalised attribution report is ready.
+            </h2>
+
+            <p class="lead-subhead">
+              See exactly where your reporting setup may be creating uncertainty — and which areas deserve attention first.
+            </p>
+
+            <form class="lead-form" id="lead-capture-form" novalidate>
+              <div class="form-group">
+                <label for="lead-fullname" class="form-label">Full Name</label>
+                <input 
+                  type="text" 
+                  id="lead-fullname" 
+                  name="fullName" 
+                  class="form-input" 
+                  placeholder="e.g. Sarah Jenkins" 
+                  autocomplete="name"
+                  required
+                >
+                <span class="form-error-msg" id="error-fullname">Please enter your full name.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="lead-email" class="form-label">Work Email</label>
+                <input 
+                  type="email" 
+                  id="lead-email" 
+                  name="workEmail" 
+                  class="form-input" 
+                  placeholder="e.g. sarah@brand.com" 
+                  autocomplete="email"
+                  required
+                >
+                <span class="form-error-msg" id="error-email">Please enter a valid work email address.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="lead-company" class="form-label">Company / Brand Name</label>
+                <input 
+                  type="text" 
+                  id="lead-company" 
+                  name="company" 
+                  class="form-input" 
+                  placeholder="e.g. Acme Apparel D2C" 
+                  autocomplete="organization"
+                  required
+                >
+                <span class="form-error-msg" id="error-company">Please enter your company or brand name.</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary lead-submit-btn" id="btn-submit-lead">
+                <span class="btn-text">Show My Attribution Report →</span>
+                <span class="spinner" style="display: none;" aria-hidden="true"></span>
+              </button>
+            </form>
+
+            <p class="lead-privacy-note">
+              We'll email you a copy of your audit. No spam, ever.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         STATE 4: PERSONALISED AUDIT REPORT
+         ========================================== -->
+    <section id="view-report" class="app-view" aria-labelledby="report-main-heading">
+      <div class="report-view-container container">
+        
+        <!-- Textual Back Button -->
+        <div class="report-top-nav">
+          <button type="button" class="btn-textual-back" id="btn-report-back" aria-label="Back">
+            ← Back
+          </button>
+        </div>
+
+        <!-- Report Header Banner -->
+        <div class="report-header-banner">
+          <div class="report-title-group">
+            <span class="report-eyebrow">Your D2C Attribution Audit</span>
+            <h1 id="report-main-heading" class="report-main-title">Here's where your reporting stands.</h1>
+            <p class="report-subtitle" id="report-company-sub">Prepared for: <strong id="report-user-meta">Marketing Team</strong></p>
+          </div>
+
+          <div class="report-actions-group">
+            <span class="report-delivery-alert">
+              <span>✓ Report ready & emailed</span>
+            </span>
+            <button type="button" class="btn btn-secondary" id="btn-print-report">
+              📄 Download / Print PDF
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 Outcome Summary Cards (Section 19) -->
+        <div class="summary-status-grid" role="region" aria-label="Outcome Classification Summary">
+          <!-- Reliable -->
+          <div class="summary-card reliable">
+            <div class="summary-card-header">
+              <span class="summary-card-status">✓ Reliable</span>
+            </div>
+            <div class="summary-card-count" id="count-reliable">0</div>
+            <p class="summary-card-label">Tracking & reporting reconcile</p>
+          </div>
+
+          <!-- Investigate -->
+          <div class="summary-card investigate">
+            <div class="summary-card-header">
+              <span class="summary-card-status">◐ Investigate</span>
+            </div>
+            <div class="summary-card-count" id="count-investigate">0</div>
+            <p class="summary-card-label">Numbers differ; reason understood</p>
+          </div>
+
+          <!-- Attribution Gap -->
+          <div class="summary-card gap">
+            <div class="summary-card-header">
+              <span class="summary-card-status">! Attribution Gaps</span>
+            </div>
+            <div class="summary-card-count" id="count-gaps">0</div>
+            <p class="summary-card-label">Materially affects budget decisions</p>
+          </div>
+
+          <!-- Unknown -->
+          <div class="summary-card unknown">
+            <div class="summary-card-header">
+              <span class="summary-card-status">? Unknown</span>
+            </div>
+            <div class="summary-card-count" id="count-unknown">0</div>
+            <p class="summary-card-label">Team cannot answer with confidence</p>
+          </div>
+        </div>
+
+        <!-- Report Hero / Biggest Finding (Section 20) -->
+        <div class="biggest-finding-card">
+          <span class="biggest-finding-eyebrow">⚡ Strategic Attribution Finding</span>
+          <h2 class="biggest-finding-headline" id="biggest-finding-headline">
+            Loading your diagnostic analysis...
+          </h2>
+          <p class="biggest-finding-subtext" id="biggest-finding-subtext">
+            Evaluating cross-channel reconciliation across Meta, Google, and Shopify.
+          </p>
+        </div>
+
+        <!-- Priority Findings Section (Section 21 & 22) -->
+        <div class="findings-section-header">
+          <div class="findings-heading-group">
+            <h2>Priority areas to investigate</h2>
+            <p>Ranked by budget decision risk and attribution status</p>
+          </div>
+        </div>
+
+        <!-- Findings List -->
+        <div class="findings-list" id="findings-container">
+          <!-- Dynamically populated finding cards -->
+        </div>
+
+        <!-- Three Post-Audit Business Questions (Section 24) -->
+        <section class="discussion-questions-section" aria-labelledby="discussion-title">
+          <div class="discussion-header">
+            <h3 id="discussion-title">Three questions to discuss after the audit</h3>
+            <p>Use these prompts in your next growth, marketing, or executive budget meeting.</p>
+          </div>
+
+          <div class="discussion-grid">
+            <div class="discussion-card">
+              <div class="discussion-num">01</div>
+              <h4 class="discussion-q-text">Where do Meta, Google and Shopify disagree the most?</h4>
+              <p class="discussion-context">
+                Pinpoint whether the variance is in conversion counts, gross vs net revenue, or lookback window assumptions.
+              </p>
+            </div>
+
+            <div class="discussion-card">
+              <div class="discussion-num">02</div>
+              <h4 class="discussion-q-text">Which disagreement is most likely to change a real budget decision?</h4>
+              <p class="discussion-context">
+                Focus on high-impact areas like double attribution and new vs returning customer split before minor discrepancies.
+              </p>
+            </div>
+
+            <div class="discussion-card">
+              <div class="discussion-num">03</div>
+              <h4 class="discussion-q-text">What would your team need to see before trusting one cross-channel view of performance?</h4>
+              <p class="discussion-context">
+                Determine what unified validation standard (Shopify order reconciliation, incrementality test, or single dashboard) would satisfy both marketing and finance.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CMGalaxy Conversion CTA (Section 25 & 42) -->
+        <section class="cmgalaxy-conversion-banner" aria-labelledby="conversion-title">
+          <span class="conversion-eyebrow">Ready to fix these attribution gaps?</span>
+          <h2 id="conversion-title" class="conversion-headline">
+            Turn attribution gaps into clearer marketing decisions.
+          </h2>
+          <p class="conversion-desc">
+            CMGalaxy helps D2C teams bring marketing and commerce data together, identify reporting gaps, and build a clearer view of what is driving revenue across channels.
+          </p>
+
+          <div class="conversion-btn-group">
+            <button type="button" class="btn btn-conversion-primary" id="btn-book-demo">
+              Book a Demo
+            </button>
+            <a href="https://platform.cmgalaxy.com/sign-up" target="_blank" rel="noopener noreferrer" class="btn btn-conversion-secondary" id="btn-signup-free-cta">
+              Sign up for free
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       SALES & CRM DATA INSPECTOR DRAWER (Section 30)
+       ========================================== -->
+  <aside class="crm-drawer-overlay" id="crm-drawer" aria-hidden="true" role="dialog" aria-labelledby="crm-drawer-title">
+    <div class="crm-drawer-content">
+      <div class="crm-drawer-header">
+        <h3 id="crm-drawer-title">⚡ Sales & CRM Lead Data</h3>
+        <button type="button" class="btn-header-ghost" id="btn-close-crm" aria-label="Close Inspector">✕ Close</button>
+      </div>
+
+      <p style="font-size: 13px; color: var(--text-secondary);">
+        This drawer demonstrates the real-time payload captured for CRM platforms (HubSpot / Salesforce / CMGalaxy pipeline) before sales contacts the lead.
+      </p>
+
+      <div class="crm-data-section">
+        <h4>Active Lead Information</h4>
+        <div id="crm-lead-summary" style="font-size: 13px; color: var(--text-primary); line-height: 1.6;">
+          <em>No lead captured yet. Complete the audit to inspect captured data.</em>
+        </div>
+      </div>
+
+      <div class="crm-data-section">
+        <h4>Marketing Attribution & UTM Source</h4>
+        <div id="crm-utm-summary" style="font-size: 13px; color: var(--text-primary); line-height: 1.6;">
+          <!-- Dynamically filled -->
+        </div>
+      </div>
+
+      <div class="crm-data-section">
+        <h4>Audit Classification Breakdown</h4>
+        <div id="crm-audit-breakdown" style="font-size: 13px; color: var(--text-primary); line-height: 1.6;">
+          <!-- Dynamically filled -->
+        </div>
+      </div>
+
+      <div class="crm-data-section">
+        <h4>Full JSON Payload (Sent to Backend / CRM)</h4>
+        <pre class="crm-json-block" id="crm-json-preview">{}</pre>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+       BOOK A DEMO / CONSULTATION MODAL (Cal.com Live Embed)
+       ========================================== -->
+  <div class="crm-drawer-overlay cal-modal-overlay" id="consultation-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-consult-title">
+    <div class="cal-modal-card">
+      <div class="cal-modal-header">
+        <div>
+          <span class="eyebrow-pill" style="margin-bottom: 2px;">CMGalaxy Demo</span>
+          <h3 id="modal-consult-title" class="cal-modal-title">Book a Demo with CMGalaxy</h3>
+        </div>
+        <button type="button" class="btn-cal-close" id="btn-close-modal" aria-label="Close modal">✕</button>
+      </div>
+
+      <div class="cal-embed-container">
+        <!-- Cal inline embed code begins -->
+        <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-demo"></div>
+        <script type="text/javascript">
+          (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", "demo", {origin:"https://app.cal.com"});
+        Cal.config = Cal.config || {};
+        Cal.config.forwardQueryParams = true;
+
+          Cal.ns.demo("inline", {
+            elementOrSelector:"#my-cal-inline-demo",
+            config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+            calLink: "cmgalaxy/demo",
+          });
+
+          Cal.ns.demo("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+        </script>
+        <!-- Cal inline embed code ends -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       FOOTER (100% Matching CMGalaxy Official Footer Screenshot)
+       ========================================== -->
+  <footer class="app-footer-dark" role="contentinfo">
+    <div class="footer-top-accent"></div>
+    <div class="footer-main-container">
+      
+      <!-- 4 Columns Grid -->
+      <div class="footer-columns-grid">
+        
+        <!-- Column 1: Brand, Tagline & Social Media -->
+        <div class="footer-col footer-col-brand">
+          <!-- Logo with white text & orbital ring -->
+          <a href="https://www.cmgalaxy.com/" target="_blank" rel="noopener noreferrer" class="footer-logo" aria-label="CMGalaxy Home">
+            <img src="assets/cmgalaxy-logo-white.png" alt="CMGalaxy Logo" class="footer-logo-img">
+          </a>
+
+          <p class="footer-tagline">
+            Streamline operations with cutting-edge solutions that future-proof your business.
+          </p>
+
+          <div class="footer-social-section">
+            <span class="footer-social-label">Follow on Social Media</span>
+            <div class="footer-social-icons">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/company/cmgalaxy" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+              </a>
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/CMGalaxy" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/cmgalaxyhq" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+              </a>
+              <!-- YouTube -->
+              <a href="https://www.youtube.com/@CMGalaxyHQ" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Features -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Features</h4>
+          <ul class="footer-link-list">
+            <li><a href="https://www.cmgalaxy.com/features/omnichannel-marketing-dashboard" target="_blank" rel="noopener noreferrer" class="footer-link">Omnichannel Marketing Dashboard</a></li>
+            <li><a href="https://www.cmgalaxy.com/features/ai-assistant" target="_blank" rel="noopener noreferrer" class="footer-link">AI Agent</a></li>
+            <li><a href="https://www.cmgalaxy.com/features/full-funnel-attribution" target="_blank" rel="noopener noreferrer" class="footer-link">Full Funnel Attribution</a></li>
+            <li><a href="https://www.cmgalaxy.com/features/integration-and-connectors" target="_blank" rel="noopener noreferrer" class="footer-link">Integration and Connectors</a></li>
+            <li>
+              <a href="https://www.cmgalaxy.com/lex" target="_blank" rel="noopener noreferrer" class="footer-link footer-link-lex">
+                <svg class="lex-sparkle-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/>
+                  <path d="M18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z"/>
+                </svg>
+                <span>Lex</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Company -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-link-list">
+            <li><a href="https://www.cmgalaxy.com/about-us" target="_blank" rel="noopener noreferrer" class="footer-link">About Us</a></li>
+            <li><a href="https://cmgalaxy.com/blog" target="_blank" rel="noopener noreferrer" class="footer-link">Blog</a></li>
+            <li><a href="https://cmgalaxy.com/website-audit" target="_blank" rel="noopener noreferrer" class="footer-link">Website Audit</a></li>
+            <li><a href="https://geo.cmgalaxy.com/" target="_blank" rel="noopener noreferrer" class="footer-link">GEO Audit</a></li>
+            <li><a href="https://cmgalaxy.com/compare-cmgalaxy" target="_blank" rel="noopener noreferrer" class="footer-link">Compare CMGalaxy</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contacts -->
+        <div class="footer-col footer-col-contacts">
+          <h4 class="footer-col-title">Contacts</h4>
+          
+          <div class="footer-contact-item">
+            <div class="contact-icon-wrap" aria-hidden="true">
+              <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.23828 8.8905C1.25269 4.64991 4.70204 1.22392 8.94263 1.23833C13.1832 1.25273 16.6092 4.70209 16.5948 8.94267V9.02963C16.5426 11.7862 15.0035 14.334 13.1165 16.3253C12.0374 17.4459 10.8323 18.438 9.52524 19.2818C9.17574 19.5841 8.65734 19.5841 8.30785 19.2818C6.35935 18.0136 4.64922 16.4123 3.25567 14.5514C2.01363 12.9286 1.30845 10.9589 1.23828 8.91659L1.23828 8.8905Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle opacity="0.4" cx="8.9179" cy="9.03899" r="2.46087" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="contact-text-wrap">
+              <span class="contact-label-title">Singapore Office</span>
+              <p class="contact-address-text">
+                1 North Bridge Road, #07-10 High Street Center
+              </p>
+            </div>
+          </div>
+
+          <div class="footer-contact-item">
+            <div class="contact-icon-wrap" aria-hidden="true">
+              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.4" d="M16.2666 7.0625L12.0012 10.4968C11.194 11.1296 10.0624 11.1296 9.25518 10.4968L4.95312 7.0625" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.88787 1.5H15.3158C16.6752 1.51525 17.969 2.08993 18.896 3.0902C19.823 4.09048 20.3022 5.42903 20.222 6.79412V13.322C20.3022 14.6871 19.823 16.0256 18.896 17.0259C17.969 18.0262 16.6752 18.6009 15.3158 18.6161H5.88787C2.96796 18.6161 1 16.2407 1 13.322V6.79412C1 3.87545 2.96796 1.5 5.88787 1.5Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="contact-text-wrap">
+              <span class="contact-label-title">Email</span>
+              <a href="mailto:enquiry@cmgalaxy.com" class="contact-email-link">enquiry@cmgalaxy.com</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Divider & Copyright Bar -->
+      <div class="footer-bottom-bar">
+        <span class="footer-copyright-text">
+          Copyright © 2026 CMGalaxy | All Rights Reserved.
+        </span>
+        <div class="footer-legal-links">
+          <a href="https://www.cmgalaxy.com/privacy-policy" target="_blank" rel="noopener noreferrer" class="footer-legal-link">Privacy Policy</a>
+          <a href="https://www.cmgalaxy.com/terms-and-conditions" target="_blank" rel="noopener noreferrer" class="footer-legal-link">Terms And Conditions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

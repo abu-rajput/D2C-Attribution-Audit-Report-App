@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161C52" />
+      <stop offset="100%" stop-color="#0E1238" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- CMGalaxy Brand Mark -->
+  <rect x="100" y="85" width="52" height="52" rx="8" fill="#34C759" />
+  <text x="126" y="119" fill="#161C52" font-family="'Onest', -apple-system, sans-serif" font-size="24" font-weight="700" text-anchor="middle">CM</text>
+  <text x="170" y="120" fill="#FFFFFF" font-family="'Onest', -apple-system, sans-serif" font-size="28" font-weight="700">CMGalaxy</text>
+  <text x="345" y="120" fill="#3C7BFF" font-family="'Onest', -apple-system, sans-serif" font-size="13" font-weight="600" letter-spacing="1">ATTRIBUTION INTELLIGENCE</text>
+
+  <!-- Eyebrow Pill -->
+  <rect x="100" y="195" width="280" height="38" rx="19" fill="#1B2261" stroke="#3C7BFF" stroke-width="1.2" />
+  <circle cx="122" cy="214" r="5" fill="#34C759" />
+  <text x="138" y="219" fill="#E5E7EB" font-family="'Onest', -apple-system, sans-serif" font-size="12" font-weight="600" letter-spacing="1">12-POINT ATTRIBUTION AUDIT</text>
+
+  <!-- Main Headline -->
+  <text x="100" y="295" fill="#FFFFFF" font-family="'Onest', -apple-system, sans-serif" font-size="52" font-weight="700" letter-spacing="0">
+    Do Meta, Google &amp; Shopify
+  </text>
+  <text x="100" y="355" fill="#FFFFFF" font-family="'Onest', -apple-system, sans-serif" font-size="52" font-weight="700" letter-spacing="0">
+    actually agree on your revenue?
+  </text>
+
+  <!-- Subtitle -->
+  <text x="100" y="420" fill="#E5E7EB" font-family="'Onest', -apple-system, sans-serif" font-size="20" font-weight="400">
+    Find where reporting disagreement could influence budget decisions.
+  </text>
+
+  <!-- 4 Outcome Pills -->
+  <g transform="translate(100, 480)">
+    <!-- Reliable -->
+    <rect x="0" y="0" width="210" height="50" rx="25" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1.5" />
+    <text x="25" y="31" fill="#15803D" font-family="'Onest', -apple-system, sans-serif" font-size="15" font-weight="600">✓ RELIABLE</text>
+
+    <!-- Investigate -->
+    <rect x="230" y="0" width="230" height="50" rx="25" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.5" />
+    <text x="255" y="31" fill="#B45309" font-family="'Onest', -apple-system, sans-serif" font-size="15" font-weight="600">◐ INVESTIGATE</text>
+
+    <!-- Attribution Gap -->
+    <rect x="480" y="0" width="260" height="50" rx="25" fill="#FEF2F2" stroke="#FECACA" stroke-width="1.5" />
+    <text x="505" y="31" fill="#B91C1C" font-family="'Onest', -apple-system, sans-serif" font-size="15" font-weight="600">! ATTRIBUTION GAP</text>
+
+    <!-- Unknown -->
+    <rect x="760" y="0" width="210" height="50" rx="25" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5" />
+    <text x="785" y="31" fill="#475569" font-family="'Onest', -apple-system, sans-serif" font-size="15" font-weight="600">? UNKNOWN</text>
+  </g>
+</svg>
