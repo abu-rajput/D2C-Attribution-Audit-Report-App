@@ -9,7 +9,6 @@ on:
 jobs:
   deploy:
     name: Deploy to Hosting Server
-    if: github.repository == 'supportcmgalaxy/D2C-Attribution-Audit-Report-App'
     runs-on: ubuntu-latest
 
     steps:
