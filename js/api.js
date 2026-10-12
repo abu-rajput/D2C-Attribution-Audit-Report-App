@@ -205,18 +205,25 @@ export const apiService = {
    */
   async sendReportEmail(email, reportData) {
     try {
-      const response = await fetch('./send-mail.php', {
+      const response = await fetch('./send_email.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(reportData)
       });
-      const result = await response.json();
-      console.log(`[CMGalaxy Email Service] ✉️ SMTP Dispatch Result:`, result);
+      const text = await response.text();
+      let result = null;
+      try {
+        result = JSON.parse(text);
+      } catch (parseErr) {
+        console.warn('[CMGalaxy Email Service] Raw response (non-JSON):', text);
+        return { success: false, error: 'Non-JSON server response' };
+      }
+      console.log('[CMGalaxy Email Service] ✉️ SMTP Dispatch Result:', result);
       return result;
     } catch (err) {
-      console.warn(`[CMGalaxy Email Service] ⚠️ Email Notice:`, err.message);
+      console.warn('[CMGalaxy Email Service] ⚠️ Notice:', err.message);
       return { success: false, error: err.message };
     }
   },
