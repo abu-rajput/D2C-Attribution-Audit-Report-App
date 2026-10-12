@@ -139,7 +139,7 @@ $userBody = "
 // 4. ADMIN EMAIL CONTENT (Admin ke email ka Subject aur Body)
 // 👉 YAHAN ADMIN KA SUBJECT & BODY CHANGE KAREIN
 // =========================================================================
-$adminSubject = "🚨 New Audit Lead: " . $userName . " (" . $userCompany . ")";
+$adminSubject = "New Audit Lead: " . $userName . " (" . $userCompany . ")";
 
 $adminBody = "
 <!DOCTYPE html>
