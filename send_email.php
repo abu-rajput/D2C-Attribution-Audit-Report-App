@@ -142,7 +142,7 @@ try {
     // =========================================================================
     // 4. ADMIN EMAIL CONTENT
     // =========================================================================
-    $adminSubject = "New Audit Lead: " . $userName . " (" . $userCompany . ")";
+    $adminSubject = "New D2C Attribution Audit Lead: " . $userName . " (" . $userCompany . ")";
 
     $adminBody = "
     <!DOCTYPE html>
@@ -151,7 +151,7 @@ try {
     <body style='font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; background-color: #f8fafc; margin: 0; padding: 24px;'>
       <div style='max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden;'>
         <div style='background: #0284c7; padding: 20px; color: #ffffff;'>
-          <h2 style='margin: 0; font-size: 18px;'>⚡ New D2C Audit Lead Captured</h2>
+          <h2 style='margin: 0; font-size: 18px;'>⚡ New D2C Attribution Audit Lead Captured</h2>
         </div>
         <div style='padding: 24px;'>
           <h3 style='margin-top: 0; font-size: 16px; color: #0f172a;'>Lead Details:</h3>
