@@ -469,7 +469,7 @@ body {
    STATE 1: LANDING PAGE STYLES
    ================================================== */
 .landing-hero {
-  padding: var(--spacing-section) 0 var(--spacing-lg);
+  padding: var(--spacing-section) 16px;
   text-align: center;
 }
 
