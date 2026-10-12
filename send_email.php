@@ -1,7 +1,7 @@
 <?php
 /**
  * CMGalaxy - SMTP Email Dispatcher for Audit Reports
- * Sends automatic notification emails to both User and Admin upon audit completion.
+ * v1.1 - Deployed via GitHub Actions CI/CD
  */
 
 // Suppress raw PHP errors from breaking JSON output
