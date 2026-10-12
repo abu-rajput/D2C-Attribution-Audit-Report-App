@@ -493,11 +493,7 @@ class CMGalaxyAuditApp {
       this.activeAnalysis = compRes.analysis;
 
       trackEvent('audit_completed', {
-        sessionId: this.activeSession.id,
-        reliableCount: this.activeAnalysis.reliableCount,
-        investigateCount: this.activeAnalysis.investigateCount,
-        attributionGapCount: this.activeAnalysis.attributionGapCount,
-        unknownCount: this.activeAnalysis.unknownCount
+        sessionId: this.activeSession.id
       });
 
       trackEvent('lead_form_viewed', {
@@ -568,8 +564,7 @@ class CMGalaxyAuditApp {
       this.activeSession = apiService.getSessionFromStorage();
 
       trackEvent('report_viewed', {
-        sessionId: this.activeSession.id,
-        riskLevel: this.activeAnalysis.strategicRiskLevel
+        sessionId: this.activeSession.id
       });
 
       // Reveal personalized report immediately!

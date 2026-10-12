@@ -70,6 +70,7 @@ export function trackEvent(eventName, payload = {}) {
   delete sanitized.fullName;
   delete sanitized.phone;
   delete sanitized.company;
+  delete sanitized.auditSummary;
 
   const eventData = {
     event: eventName,

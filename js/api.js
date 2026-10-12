@@ -164,23 +164,6 @@ export const apiService = {
         email: leadData.email.trim().toLowerCase(),
         company: leadData.company.trim()
       },
-      auditSummary: {
-        reliableCount: analysis.reliableCount,
-        investigateCount: analysis.investigateCount,
-        attributionGapCount: analysis.attributionGapCount,
-        unknownCount: analysis.unknownCount,
-        decisionImpactingCount: analysis.decisionImpactingCount,
-        strategicRiskLevel: analysis.strategicRiskLevel,
-        topFindings: analysis.topFindings.slice(0, 3).map((f) => ({
-          questionId: f.questionId,
-          title: f.title,
-          answer: f.answerLabel,
-          status: f.status,
-          budgetImpact: f.budgetImpact,
-          whyItMatters: f.whyItMatters,
-          whatToInvestigate: f.whatToInvestigate
-        }))
-      },
       answers: structuredAnswers,
       marketingSource: {
         utmSource: utm.utmSource,
@@ -218,16 +201,24 @@ export const apiService = {
   },
 
   /**
-   * Simulates transactional report email delivery.
+   * Dispatches transactional report email to User & Admin via SMTP.
    */
   async sendReportEmail(email, reportData) {
-    await mockNetworkDelay(400);
-    console.log(`[CMGalaxy Email Service] ✉️ Personalized report successfully dispatched to ${email}`, {
-      recipient: email,
-      subject: `Your CMGalaxy D2C Attribution Audit Report — ${reportData.lead.company}`,
-      sentAt: new Date().toISOString()
-    });
-    return { success: true, emailSent: true };
+    try {
+      const response = await fetch('./send-mail.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(reportData)
+      });
+      const result = await response.json();
+      console.log(`[CMGalaxy Email Service] ✉️ SMTP Dispatch Result:`, result);
+      return result;
+    } catch (err) {
+      console.warn(`[CMGalaxy Email Service] ⚠️ Email Notice:`, err.message);
+      return { success: false, error: err.message };
+    }
   },
 
   /**
@@ -237,8 +228,7 @@ export const apiService = {
     await mockNetworkDelay(500);
     console.log(`[CMGalaxy CRM Sync] 🚀 Lead synced to CMGalaxy Platform & Sales Pipeline`, {
       contact: userData,
-      leadId: leadRecord.id,
-      riskLevel: leadRecord.auditSummary.strategicRiskLevel
+      leadId: leadRecord.id
     });
     return { success: true, synced: true };
   },
